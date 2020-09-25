@@ -14,6 +14,10 @@
   
 
   formHandler.addSubmitHandler(function (data) {
+    var string ='Thank you for your payment '+ data.title_1 + ' ' +data.username + '!';
+    alert(string);
+
+    
 
   });
 
