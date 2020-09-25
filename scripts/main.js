@@ -14,6 +14,7 @@
     var checkList = new CheckList(CHECKLIST_SELECTOR);
     checkList.addClickHandler(myTruck.deliverOrder.bind(myTruck));
     var formHandler = new FormHandler(FORM_SELECTOR);
+    var Validation = App.Validation;
     // var paymentHandler = new FormHandler(PAYMENT_SELECTOR);
 
     
@@ -23,9 +24,7 @@
       checkList.addRow.call(checkList, data);
     });
 
+    formHandler.addInputHandler(Validation.isCompanyEmail);
 
-    // paymentHandler.addSubmitHandler(function (data) {
-    //   // myTruck.createOrder.call(myTruck, data);
-    //   // checkList.addRow.call(checkList, data);
-    // });
+
   })(window);
